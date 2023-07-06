@@ -1,0 +1,114 @@
+$form-wrapper-margin: 100px;
+$link-color: #00ffff;
+$text-color: #ffff;
+$background-color: sandybrown;
+$main-color: #502202;
+
+
+.register-form-bd {
+  background: $background-color;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+
+.form-container {
+  font-size: 16px;
+  background: $main-color;
+  padding: 20px 40px;
+  border-radius: 5px;
+  width: 400px;
+  height: 600px;
+  margin: $form-wrapper-margin auto;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: $text-color;
+    font-weight: normal;
+    font-size: 32px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $link-color;
+  }
+  .errMsg {
+    color: #ff0000;
+    margin-top: 0;
+  }
+}
+
+.register-btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: $background-color;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 25px;
+  color: $main-color;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.text {
+  margin-top: 7px;
+  color: $text-color;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+
+  input {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px $text-color solid;
+    display: block;
+    width: 100%;
+    padding: 20px 5px;
+    font-size: 18px;
+    color: $text-color;
+
+    &::placeholder {
+      color: $background-color;
+    }
+
+    &:focus {
+      outline: 0;
+      border-bottom-color: $link-color;
+    }
+  }
+}
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    margin: $form-wrapper-margin auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    font-size: 14px;
+    padding: 15px;
+    max-width: 300px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .login-btn {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+$link-color: #00ffff;
+$text-color: #ffff;
+$logo-size: 35px;
+$gap-size: 30px;
+
+.top {
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: url('/images/header_background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 2px solid $link-color;
+  padding: 5px 35px;
+  align-items: flex-start;
+  
+  a {
+    color: $text-color;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    
+    &:hover {
+      text-decoration: underline $link-color;
+      &.excludeLink {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .leftSide {
+    display: flex;
+    gap: $gap-size;
+    align-items: flex-end;
+    height: 60px;
+    
+    .logoImg {
+      width: $logo-size;
+      height: $logo-size;
+    }
+
+    .logoImgDiv {
+      text-align: center;
+    }
+  }
+
+  .categoryDiv {
+    position: absolute;
+    left: 24.5%;
+    top: 10%;
+    line-height: 25px;
+    
+    p {
+      color: $text-color;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline $link-color;
+      }
+    }
+
+  }
+
+  .rightSide {
+    display: flex;
+    gap: $gap-size;
+    align-items: flex-end;
+    height: 60px;
+
+    .search {
+      width: 100px;
+      height: 30px;
+      border-radius: 30px;
+      padding-left: 15px;
+    }
+
+    .cartImg {
+      width: 30px;
+      height: 30px;
+      background-color: $text-color;
+      border-radius: 5px;
+    }
+  }
+
+  
+}
+
+
+.hamburger {
+  display: none;
+}
+.menu {
+  display: none;
+}
+
+  
+
+@media (max-width: 553px) {
+.top {
+  display: flex;
+  justify-content: left;
+  height: 320px;
+
+}
+  .rightSide a{
+    display: none;
+  }
+  .categoryDiv {
+    display: none;
+  }
+  .leftSide a {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+  .search2 {
+    width: 80px;
+    height: 20px;
+    border-radius: 30px;
+    padding-left: 15px;
+  }
+
+  .hamburger {
+    display: block; 
+    cursor: pointer;
+
+  }
+
+  .hamburger img {
+    width: 30px; 
+    height: 30px;
+  }
+  .menu{
+    display: none;
+
+    .categDiv {
+      position: absolute;
+      left: 45%;
+      top: 8.5%;
+      line-height: 25px;
+      cursor: pointer;
+    }
+ }
+ 
+  .menu.show-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-color; 
+    padding: 10px;
+  }
+  
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: $text-color;
+  }
+  
+  .cartImg {
+    width: 30px;
+    height: 30px;
+    background-color: $text-color;
+    border-radius: 5px;
+  }
+}
+
+

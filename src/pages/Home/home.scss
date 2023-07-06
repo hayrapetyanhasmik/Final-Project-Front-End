@@ -1,0 +1,94 @@
+$link-color: #00ffff;
+$main-color:  #502202;
+
+.mainContainer {
+    width: 100%;
+    background-color: sandybrown;
+    color: $main-color;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    padding-top: 50px;
+
+    .homeImgDiv{
+        width: 45%;
+        img{
+           width: 100%; 
+        }
+    }
+
+    article {
+        padding-right: 40px;
+        width: 50%;
+       
+        h3 {
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        p {
+            line-height: 29px;
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        .more {
+            padding-top: 20px;
+            text-align: right;
+            color: $main-color;
+            
+            &:hover {
+                text-decoration: underline $link-color;
+            }
+        }
+    }
+    .slideshow {
+        margin: 0 auto;
+        overflow: hidden;
+        width: 60%;
+      
+        .slideshowSlider {
+          white-space: nowrap;
+          transition: ease 1000ms;
+
+        }
+      
+        .slide {
+          display: inline-block;
+          height: 400px;
+          width: 100%;
+        }
+      
+        .slideshowDots {
+          text-align: center;
+      
+          .slideshowDot {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 15px 7px 0px;
+            background-color: #ffff;
+          }
+      
+          .slideshowDot.active {
+            background-color: $main-color;
+          }
+        }
+      }
+    
+}
+
+@media screen and (max-width: 999px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  article {
+    padding-left: 40px;
+  }
+    
+  }

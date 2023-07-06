@@ -1,0 +1,56 @@
+$link-color: #00ffff;
+$background-color: sandybrown;
+$main-color: #502202;
+
+.shopContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    grid-gap: 28px;
+    background-color: $background-color;
+    color: $main-color;
+    padding-top: 100px;
+    position: relative;
+
+    .imgContainer {
+        width: 282px;                
+        text-align: center;
+        line-height: 25px;
+        margin-bottom: 30px;
+
+        a{
+          color: $main-color;
+          text-decoration: none;
+        }
+        
+        img{
+            width: 100%;
+            height: 186px;    
+            border: 2px solid $link-color;
+        }
+        button{
+            color: $main-color;
+            border: none;
+            cursor: pointer;
+            padding: 3px;
+        }
+
+    }
+    .paginationDiv {
+        display: flex;
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 48.5%;
+       
+        p {
+            margin-right: 12px;
+            color: $main-color;
+            border: none;
+            cursor: pointer;
+        }
+        
+    }
+
+
+}

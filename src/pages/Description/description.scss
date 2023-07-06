@@ -1,0 +1,95 @@
+$link-color: #00ffff;
+$background-color: sandybrown;
+$main-color: #502202;
+$text-color: #ffff;
+
+.descContainer {
+    background-color: $background-color;
+    color: $main-color;
+    padding-top: 50px;
+    display: flex;
+    gap: 50px;
+  
+    .imgDiv {
+      width: 35%;
+  
+      .mainImg {
+        width: 100%;
+        height: 270px;
+      }
+
+      .secondaryImg {
+        width: 80px;
+        height: 60px;
+        margin: 13px;
+        border: 2px solid $link-color;
+      }
+    }
+  
+    .detailsDiv {
+      width: 40%;
+    
+    .checkDiv {
+        padding: 20px 0;
+      img {
+        width: 16px;
+        margin-right: 5px;
+      }
+    }
+
+      h2 {
+        margin-bottom: 30px;
+      }
+  
+      .inp {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        width: 65px;
+        height: 40px;
+        margin: 40px 10px 20px 0;
+  
+        &::before {
+          content: '';
+          position: absolute;
+          top: 25%;
+          left: 50%;
+          width: 6px;
+          height: 12px;
+          border: solid $text-color;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          display: none;
+        }
+  
+        &:checked::before {
+          display: block;
+        }
+  
+        &:nth-of-type(1) {
+          background-color: $main-color;
+        }
+        &:nth-of-type(2) {
+            background-color: #845839;
+          }
+        &:nth-of-type(3) {
+            background-color: #e19e6e;
+        }
+      }
+      .btnDiv {
+        button {
+          width: 90px;
+          height: 35px;
+          margin-top: 14px;
+          background-color: $text-color;
+          border: none;
+          cursor: pointer;
+          color: $main-color;
+
+        }
+      }
+      }
+    }
+  
+  
